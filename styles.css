@@ -233,7 +233,6 @@ img {
 h1,
 h2,
 h3,
-h4,
 p {
   margin-top: 0;
 }
@@ -245,8 +244,7 @@ h1 {
   letter-spacing: -0.06em;
 }
 
-h1 span,
-.dark h2 span {
+h1 span {
   color: var(--orange);
 }
 
@@ -406,9 +404,6 @@ p {
 
 .mission-grid,
 .value-grid,
-.market-grid,
-.model-grid,
-.steps-grid,
 .team-grid,
 .stats-grid,
 .pricing-grid {
@@ -426,22 +421,16 @@ p {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.value-grid,
-.market-grid,
-.model-grid,
-.steps-grid {
+.value-grid {
   grid-template-columns: repeat(3, 1fr);
 }
 
 .mission-card,
 .team-card,
 .value-card,
-.market-card,
-.step-card,
 .price-card,
 .selector-panel,
-.comparison,
-.funnel,
+.business-note,
 .process-output {
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -451,17 +440,13 @@ p {
 
 .mission-card,
 .team-card,
-.value-card,
-.market-card,
-.step-card {
+.value-card {
   padding: 28px;
 }
 
 .icon,
 .number,
-.avatar,
-.step-card span,
-.model-card span {
+.avatar {
   display: grid;
   place-items: center;
   width: 46px;
@@ -476,8 +461,6 @@ p {
 .mission-card h3,
 .team-card h3,
 .value-card h3,
-.market-card h3,
-.step-card h3,
 .price-card h3 {
   color: var(--navy);
   margin-bottom: 10px;
@@ -497,8 +480,7 @@ p {
   font-size: 1.1rem;
 }
 
-.stats-grid .stat-card,
-.model-card {
+.stats-grid .stat-card {
   padding: 28px;
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.07);
@@ -724,117 +706,21 @@ input[type="range"] {
   font-weight: 900;
 }
 
-.market-card strong {
-  display: block;
-  margin-bottom: 12px;
-  color: var(--orange);
-  font-size: 2rem;
-}
-
-.comparison {
+.business-note {
   margin-top: 28px;
   padding: 28px;
+  border-left: 6px solid var(--orange);
 }
 
-.comparison h3 {
-  color: var(--navy);
-}
-
-.comparison-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.comparison-grid div {
-  padding: 18px;
-  border-radius: 18px;
-  background: var(--soft);
-}
-
-.comparison-grid h4 {
+.business-note strong {
+  display: block;
   margin-bottom: 8px;
-  color: var(--orange);
-}
-
-.model-card h3,
-.model-card p,
-.dark .model-card h3 {
-  color: white;
-}
-
-.model-card span {
-  color: white;
-  background: var(--orange);
-}
-
-.numbers {
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  overflow: hidden;
-  border-radius: var(--radius);
-  background: white;
-  box-shadow: var(--shadow);
-}
-
-.numbers div {
-  padding: 28px;
-  text-align: center;
-  border-right: 1px solid var(--border);
-}
-
-.numbers div:last-child {
-  border-right: 0;
-}
-
-.numbers strong {
-  display: block;
-  color: var(--orange);
-  font-size: 2.2rem;
-}
-
-.numbers span {
   color: var(--navy);
-  font-weight: 800;
+  font-size: 1.25rem;
 }
 
-.funnel {
-  margin-top: 28px;
-  padding: 28px;
-}
-
-.funnel h3 {
-  color: var(--navy);
-}
-
-.funnel-bar {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
-  margin: 18px 0;
-}
-
-.funnel-bar button {
-  min-height: 80px;
-  border: 0;
-  border-radius: 16px;
-  color: white;
-  background: linear-gradient(135deg, var(--navy), var(--navy-2));
-  cursor: pointer;
-  font-weight: 900;
-  transition: 0.25s ease;
-}
-
-.funnel-bar button:hover {
-  background: var(--orange);
-  transform: translateY(-4px);
-}
-
-#funnelInfo {
-  margin-bottom: 0;
-  font-weight: 800;
-  color: var(--navy);
+.business-note p {
+  margin: 0;
 }
 
 .process {
@@ -1037,18 +923,8 @@ textarea:focus {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .selector-panel,
-  .numbers {
+  .selector-panel {
     grid-template-columns: 1fr;
-  }
-
-  .numbers div {
-    border-right: 0;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .numbers div:last-child {
-    border-bottom: 0;
   }
 }
 
@@ -1093,12 +969,7 @@ textarea:focus {
 
   .mission-grid,
   .value-grid,
-  .market-grid,
-  .model-grid,
-  .steps-grid,
-  .comparison-grid,
-  .process,
-  .funnel-bar {
+  .process {
     grid-template-columns: 1fr;
   }
 
